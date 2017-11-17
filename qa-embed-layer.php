@@ -72,6 +72,18 @@
 						'<iframe frameborder="0" width="'.$w.'" height="'.$h.'" src="//www.dailymotion.com/embed/video/$1?wmode=transparent"></iframe>'
 					)
 				),
+				'facebookPagePhoto'=>array(
+					array(
+						'(https{0,1}:\/\/w{0,3}\.*facebook\.com\/.*photos\/[^< \n]*)+',
+						'<iframe src="//www.facebook.com/plugins/post.php?href=$1&width='.$w2.'" width="'.$w2.'" height="'.$h2.'" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>'
+					)
+				),
+				'facebookPageVideo'=>array(
+					array(
+						'(https{0,1}:\/\/w{0,3}\.*facebook\.com\/.*videos\/[^< \n]*)+',
+						'<iframe src="//www.facebook.com/plugins/video.php?href=$1&show_text=1&width='.$w.'" width="'.$w.'" height="'.$h.'" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>'
+					)
+				),
 				'image'=>array(
 					array(
 						'(https*:\/\/[-\%_\/.a-zA-Z0-9+]+\.(png|jpg|jpeg|gif|bmp))[^< ]*',
